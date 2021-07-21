@@ -1,11 +1,12 @@
 .home {
-  background-color: rgb(24, 24, 24);
+  background-color: #4b237c;
 }
 
 .home .title {
   font-size: 3rem;
   font-weight: 300;
   line-height: 1.2;
+  text-shadow: 3px 2px black;
 }
 
 .home .subtitle {

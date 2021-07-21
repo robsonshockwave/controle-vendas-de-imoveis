@@ -5,7 +5,7 @@
   justify-content: space-between;
   background: linear-gradient(
     56deg,
-    rgba(0, 0, 0, 1) 0%,
+    rgb(24, 24, 24) 0%,
     rgba(52, 48, 52, 1) 81%,
     rgba(43, 0, 116, 1) 100%
   );
@@ -26,9 +26,10 @@
 }
 
 .header .title-group a {
-  font-size: 1rem;
+  font-weight: 400;
+  font-size: 0.9rem;
   color: white;
-  text-shadow: 1px 1px #808080;
+  text-shadow: 1px 1px #000000;
 }
 
 .header .title-group i {

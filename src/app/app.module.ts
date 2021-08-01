@@ -46,6 +46,8 @@ import { SaleCreateComponent } from './components/sale/sale-create/sale-create.c
 import { SaleReadComponent } from './components/sale/sale-read/sale-read.component';
 import { ReadPaymentComponent } from './views/read-payment/read-payment.component';
 import { PaymentReadComponent } from './components/payment/payment-read/payment-read.component';
+import { ReadReportComponent } from './views/read-report/read-report.component';
+import { ReportReadComponent } from './components/report/report-read/report-read.component';
 
 registerLocaleData(localePt);
 
@@ -72,7 +74,9 @@ registerLocaleData(localePt);
     SaleCreateComponent,
     SaleReadComponent,
     ReadPaymentComponent,
-    PaymentReadComponent
+    PaymentReadComponent,
+    ReadReportComponent,
+    ReportReadComponent
   ],
   imports: [
     BrowserModule,

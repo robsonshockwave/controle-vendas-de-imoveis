@@ -40,6 +40,14 @@ p {
   margin: 10px 0;
 }
 
+.block {
+  display: block;
+}
+
+i {
+  font-size: 0.8rem;
+}
+
 button {
   background-color: blueviolet;
   margin-top: 20px;

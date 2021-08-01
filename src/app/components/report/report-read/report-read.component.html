@@ -17,23 +17,39 @@
             </ng-container>
     
             <ng-container matColumnDef="imoveisVendidos">
-                <th mat-header-cell *matHeaderCellDef>Total de Imóveis Vendidos</th>
+                <th mat-header-cell *matHeaderCellDef>Nº Imóveis Vendidos</th>
                 <td mat-cell *matCellDef="let row">{{row.imoveisVendidos}}</td>
             </ng-container>
     
             <ng-container matColumnDef="imoveisEncalhados">
-                <th mat-header-cell *matHeaderCellDef>Total de Imóveis Encalhados</th>
+                <th mat-header-cell *matHeaderCellDef>Nº Imóveis Encalhados</th>
                 <td mat-cell *matCellDef="let row">{{row.imoveisEncalhados}}</td>
             </ng-container>
     
             <ng-container matColumnDef="faturamentoCorretor">
                 <th mat-header-cell *matHeaderCellDef>Faturamento dos Corretores</th>
-                <td mat-cell *matCellDef="let row">{{row.faturamentoCorretor}}</td>
+                <td mat-cell *matCellDef="let row">
+                    <span *ngFor="let nome of row.faturamentoCorretor">
+                        <span class="block">
+                            <i>Nome: </i>{{nome.nome}}  
+                            &nbsp;&nbsp;
+                            <i>Faturamento: </i>{{nome.faturamento}},
+                        </span>
+                    </span>
+                </td>
             </ng-container>
     
             <ng-container matColumnDef="valorPagoCorretor">
                 <th mat-header-cell *matHeaderCellDef>Valor Pago aos Corretores</th>
-                <td mat-cell *matCellDef="let row">{{row.valorPagoCorretor}}</td>
+                <td mat-cell *matCellDef="let row">
+                    <span *ngFor="let nome of row.valorPagoCorretor">
+                        <span class="block">
+                            <i>Nome: </i>{{nome.nome}}  
+                            &nbsp;&nbsp;
+                            <i>Pago: </i>{{nome.pago}},
+                        </span>
+                    </span>
+                </td>
             </ng-container>
     
             <ng-container matColumnDef="corretorDoMes">

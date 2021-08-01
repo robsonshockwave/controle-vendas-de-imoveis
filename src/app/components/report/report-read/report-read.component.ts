@@ -18,6 +18,7 @@ export class ReportReadComponent implements OnInit {
   ngOnInit(): void {
     this.reportService.read().subscribe(report => { 
       this.report = report
+      console.log(report)
     })
   }
 

@@ -32,15 +32,15 @@ function verifica2(value){
     }
 };
 
-window.onload = function () { //window.onload vai esperar a página terminar de executar para receber a função
-    document.getElementById("download") //pegando o id download da página html
-        .addEventListener("click", () => { //.addEventListener serve para realizar o evento ao clicar ("click")
+window.onload = function () {
+    document.getElementById("download")
+        .addEventListener("click", () => {
             const to_pdf = this.document.getElementById("to_pdf");
             console.log(to_pdf);
             console.log(window);
             var opt = {
                 margin: 0.2,
-                filename: 'nome_do_seu_pdf.pdf',
+                filename: 'relatorio-gerencial.pdf',
                 image: { type: 'jpeg', quality: 0.98 },
                 html2canvas: { scale: 2 },
                 jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' }

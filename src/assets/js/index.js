@@ -5,11 +5,11 @@ function verifica(value){
 
     if(value == "Contratado"){
         salario.disabled = false;
-        dataAdmissao.disabled = false;
+        //dataAdmissao.disabled = false;
         percentualComissao.disabled = true;
     }else if(value == "Comissionado"){
         salario.disabled = true;
-        dataAdmissao.disabled = true;
+        //dataAdmissao.disabled = true;
         percentualComissao.disabled = false;
     }
 };
@@ -22,12 +22,12 @@ function verifica2(value){
 
     if(value == "Contratado"){
         salario.style.display = "inline";
-        dataAdmissao.style.display = "inline"
+        //dataAdmissao.style.display = "inline"
         percentualComissao.style.display = "none";
     }else if(value == "Comissionado"){
         salario.style.display = "none";
-        dataAdmissao.style.display = "none"
-        dataName.style.display = "none"
+        //dataAdmissao.style.display = "none"
+        //dataName.style.display = "none"
         percentualComissao.style.display = "inline";
     }
 };

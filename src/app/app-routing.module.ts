@@ -11,6 +11,7 @@ import { BrokerCreateComponent } from './components/brokers/broker-create/broker
 import { BrokerUpdateComponent } from './components/brokers/broker-update/broker-update.component';
 import { SalesCrudComponent } from './views/sales-crud/sales-crud.component';
 import { SaleCreateComponent } from './components/sale/sale-create/sale-create.component';
+import { ReadPaymentComponent } from './views/read-payment/read-payment.component';
 
 
 const routes: Routes = [
@@ -53,6 +54,10 @@ const routes: Routes = [
   {
     path: "sales/create",
     component: SaleCreateComponent
+  },
+  {
+    path: "payments",
+    component: ReadPaymentComponent
   },
 ];
 

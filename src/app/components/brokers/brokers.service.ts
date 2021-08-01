@@ -23,6 +23,7 @@ export class BrokersService {
   }
 
   create(brokers: Brokers): Observable<Brokers> {
+    console.log(brokers)
     return this.http.post<Brokers>(this.baseUrl, brokers)
   }
 

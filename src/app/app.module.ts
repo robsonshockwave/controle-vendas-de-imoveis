@@ -44,6 +44,8 @@ import { BrokerUpdateComponent } from './components/brokers/broker-update/broker
 import { SalesCrudComponent } from './views/sales-crud/sales-crud.component';
 import { SaleCreateComponent } from './components/sale/sale-create/sale-create.component';
 import { SaleReadComponent } from './components/sale/sale-read/sale-read.component';
+import { ReadPaymentComponent } from './views/read-payment/read-payment.component';
+import { PaymentReadComponent } from './components/payment/payment-read/payment-read.component';
 
 registerLocaleData(localePt);
 
@@ -68,7 +70,9 @@ registerLocaleData(localePt);
     BrokerUpdateComponent,
     SalesCrudComponent,
     SaleCreateComponent,
-    SaleReadComponent
+    SaleReadComponent,
+    ReadPaymentComponent,
+    PaymentReadComponent
   ],
   imports: [
     BrowserModule,

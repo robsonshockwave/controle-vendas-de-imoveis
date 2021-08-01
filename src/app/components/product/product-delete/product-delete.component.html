@@ -1,0 +1,44 @@
+<mat-card>
+    <mat-card-title>Excluir Imóvel</mat-card-title>
+    <form>
+        <mat-form-field>
+            <input matInput placeholder="Código" type="number"
+                [(ngModel)]="product.codigo" name="codigo" disabled="">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Tipo"
+                [(ngModel)]="product.tipo" name="tipo" disabled="">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Descrição"
+                [(ngModel)]="product.descricao" name="descricao" disabled="">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Nome do Vendedor"
+                [(ngModel)]="product.nomeVendedor" name="nomeVendedor" disabled="">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Preço (R$)"
+                [(ngModel)]="product.preco" name="preco" disabled="">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="URL da Imagem Principal" id="imagem1"
+                [(ngModel)]="product.imagem1" name="imagem1" disabled="">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="URL da imagem 2" 
+                [(ngModel)]="product.imagem2" name="imagem2" disabled="">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="URL da imagem 3" 
+                [(ngModel)]="product.imagem3" name="imagem3" disabled="">
+        </mat-form-field>
+    </form>
+    <button mat-raised-button (click)="deleteProduct()" color="warn">
+        Excluir
+    </button>
+    
+    <button mat-raised-button (click)="cancel()">
+        Cancelar
+    </button>
+</mat-card>

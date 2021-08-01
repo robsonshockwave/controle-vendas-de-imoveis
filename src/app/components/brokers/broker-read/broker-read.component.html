@@ -1,0 +1,53 @@
+<div class="max-wid mat-elevation">
+    <p>Se preferir, selecione o tipo do empregado:</p>
+    <select [(ngModel)]="teste" name="tipo">
+        <option value="Contratado">Contratado</option>
+        <option value="Comissionado">Comissionado</option>
+    </select>
+
+    <table mat-table [dataSource]="brokers |filter:teste">
+        <ng-container matColumnDef="nomeCorretor">
+            <th mat-header-cell *matHeaderCellDef>Nome do Corretor</th>
+            <td mat-cell *matCellDef="let row">{{row.nomeCorretor}}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="tipo">
+            <th mat-header-cell *matHeaderCellDef>Tipo do Empregado</th>
+            <td mat-cell *matCellDef="let row">{{row.tipo}}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="creci">
+            <th mat-header-cell *matHeaderCellDef>Nº CRECI</th>
+            <td mat-cell *matCellDef="let row">{{row.creci}}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="salario">
+            <th mat-header-cell *matHeaderCellDef>Salário</th>
+            <td mat-cell *matCellDef="let row">{{row.salario ? (row.salario | currency: 'BRL') : "Não Contém"}}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="dataAdmissao">
+            <th mat-header-cell *matHeaderCellDef>Data de Admissão</th>
+            <td mat-cell *matCellDef="let row">{{row.dataAdmissao ? row.dataAdmissao : "Não Contém"}}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="percentualComissao">
+            <th mat-header-cell *matHeaderCellDef>Percentual de Comissão %</th>
+            <td mat-cell *matCellDef="let row">{{row.percentualComissao ? row.percentualComissao : "Não Contém"}}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="action">
+            <th mat-header-cell *matHeaderCellDef>Ações</th>
+            <td mat-cell *matCellDef="let row">
+                <a routerLink="/brokers/update/{{ row.id }}" class="edit">
+                    <i class="material-icons">
+                        edit
+                    </i>
+                </a>
+            </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+</div>

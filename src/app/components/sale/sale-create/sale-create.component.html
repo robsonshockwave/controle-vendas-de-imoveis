@@ -1,0 +1,38 @@
+<mat-card>
+    <mat-card-title>Cadastrar Venda de Imóvel</mat-card-title>
+    <form>
+
+        <p>Código do Imóvel:</p>
+        <select id="codigo" name="codigo" [(ngModel)]="sale.codigo">
+            <option [ngValue]="codigo.codigo" *ngFor="let codigo of product">{{codigo.codigo}}</option>
+        </select> 
+
+        <p>Nome do Corretor:</p>
+        <select id="nomeCorretor" name="nomeCorretor" [(ngModel)]="sale.nomeCorretor">
+            <option [ngValue]="nomeCorretor.nomeCorretor" *ngFor="let nomeCorretor of brokers">{{nomeCorretor.nomeCorretor}}</option>
+        </select> 
+
+        <mat-form-field>
+            <input type="number" matInput placeholder="Valor da Venda"
+                [(ngModel)]="sale.valorVenda" name="valorVenda">
+        </mat-form-field>
+
+        <mat-form-field> 
+            <input type="text" matInput placeholder="Nome do Comprador"
+                [(ngModel)]="sale.comprador" name="comprador">
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matInput type="date" class="sale-color" placeholder="Data de Venda"
+                [(ngModel)]="sale.dataVenda" name="dataVenda" id="dataVenda">
+        </mat-form-field>
+
+    </form>
+    <button mat-raised-button (click)="createSale()" color="primary">
+        Salvar
+    </button>
+    
+    <button mat-raised-button (click)="cancel()">
+        Cancelar
+    </button> 
+</mat-card>

@@ -15,3 +15,13 @@ button {
 .hide {
   display: none;
 }
+
+.max-wid {
+  max-height: 900px;
+}
+
+@media only screen and (max-height: 900px) {
+  .max-wid {
+    max-height: 550px;
+  }
+}

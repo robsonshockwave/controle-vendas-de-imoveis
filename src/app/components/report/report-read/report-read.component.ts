@@ -9,6 +9,7 @@ import { ReportService } from '../report.service';
 })
 export class ReportReadComponent implements OnInit {
 
+  data: string
   report: Report[]
   yearMonth: string
   displayedColumns = ['faturamentoTotal', 'lucroImobiliaria', 'imoveisVendidos', 'imoveisEncalhados', 'faturamentoCorretor', 'valorPagoCorretor', 'corretorDoMes', 'data']
@@ -16,10 +17,19 @@ export class ReportReadComponent implements OnInit {
   constructor(private reportService: ReportService) { }
 
   ngOnInit(): void {
+
     this.reportService.read().subscribe(report => { 
       this.report = report
       console.log(report)
     })
+
   }
 
+  getReadData(): void {
+    this.reportService.readData(this.data).subscribe(report => {
+      this.report = report
+      //console.log(this.data) 
+      console.log(report)
+    })
+  }
 }

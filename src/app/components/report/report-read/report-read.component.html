@@ -1,8 +1,19 @@
 <div class="max-wid mat-elevation">
+    <!---->
+    <div class="req-rel">
+        <p>Se preferir, digite o ano-mês (exemplo: 2021-07):</p>
+        <form action="" method="get">
+            <input type="text" matInput placeholder="digite a data" [(ngModel)]="data" name="data"> 
+        </form>
+        <button type="submit" (click)="getReadData()" color="primary">enviar</button>
+    </div>
+
+    <!--
     <div class="search">
         <p>Se preferir, digite o ano-mês (exemplo: 2021-07):</p>
         <input class="yearMonth" type="text" [(ngModel)]="yearMonth">
     </div>
+    -->
 
     <div id="to_pdf">
         <table mat-table [dataSource]="report | filter:yearMonth">

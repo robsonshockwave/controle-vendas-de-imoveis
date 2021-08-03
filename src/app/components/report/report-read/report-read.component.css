@@ -30,6 +30,16 @@ p {
   max-height: 900px;
 }
 
+.req-rel {
+  display: flex;
+  align-items: center;
+}
+
+.req-rel button {
+  margin: 0 5px;
+  padding: 5px;
+}
+
 @media only screen and (max-height: 900px) {
   .max-wid {
     max-height: 500px;

@@ -10,6 +10,7 @@ import { map, catchError } from "rxjs/operators";
 })
 export class ProductService {
   baseUrl = "http://localhost:3001/products";
+  UrlCreate = "http://localhost:3001/api/imoveis"
 
   constructor(private snackBar: MatSnackBar, private http: HttpClient) {}
 
@@ -23,7 +24,7 @@ export class ProductService {
   }
 
   create(product: Product): Observable<Product> {
-    return this.http.post<Product>(this.baseUrl, product).pipe(
+    return this.http.post<Product>(this.UrlCreate, product).pipe(
       map((obj) => obj),
       catchError((e) => this.errorHandler(e))
     );

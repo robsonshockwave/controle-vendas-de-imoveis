@@ -9,7 +9,7 @@ function verifica(value){
         percentualComissao.disabled = true;
     }else if(value == "Comissionado"){
         salario.disabled = true;
-        //dataAdmissao.disabled = true;
+        dataAdmissao.disabled = true;
         percentualComissao.disabled = false;
     }
 };

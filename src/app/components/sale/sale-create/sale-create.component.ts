@@ -19,7 +19,8 @@ export class SaleCreateComponent implements OnInit {
     creci: '',
     valorVenda: null,
     comprador: '',
-    dataVenda: null
+    dataVenda: null,
+    imovel: null
   }
 
   product: Product[]

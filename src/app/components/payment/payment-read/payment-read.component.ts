@@ -14,15 +14,18 @@ export class PaymentReadComponent implements OnInit {
   payment: Payment[]
   payment2: Payment[]
   tipoCorretor: string
-  yearMonth: string
-  yearMonth2: string
   brokers: Brokers[]
   brokers2: Brokers[]
-  displayedColumns = ['nomeCorretor', 'tipoCorretor', 'valorRecebido', 'dataAdmissao']
+  displayedColumns = ['nome', 'tipo', 'total_pagar', 'data']
+  periodo: []
+  creci: []
+
+  paymentBroker: any
 
   constructor(private paymentService: PaymentService, private brokersService: BrokersService) { }
 
   ngOnInit(): void {
+    /*
     this.paymentService.read().subscribe(payment => { 
       this.payment = payment
     })
@@ -38,6 +41,13 @@ export class PaymentReadComponent implements OnInit {
     this.brokersService.read2().subscribe(broker => {
       this.brokers2 = broker
     })
+    */
   }
 
+  getReadData(): void {
+    this.paymentService.readData(this.periodo, this.creci).subscribe(payment => {
+      this.paymentBroker = new Array(payment)
+      // console.log(this.data) 
+    })
+  }
 }

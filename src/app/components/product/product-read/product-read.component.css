@@ -8,6 +8,10 @@ table {
   margin-bottom: 5px;
 }
 
+h2 {
+  margin-bottom: 0;
+}
+
 p {
   font-size: 0.8rem;
   color: #575757;

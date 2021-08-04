@@ -1,72 +1,33 @@
 <div class="max-wid mat-elevation">
-    <h1>Comissionados</h1>
-    <div class="search select-box">
-        <p>Se preferir, selecione o nome do corretor:</p>
-        <select [(ngModel)]="tipoCorretor">
-            <option class="size-input" [ngValue]="nomeCorretor.nomeCorretor" *ngFor="let nomeCorretor of brokers">{{nomeCorretor.nomeCorretor}}</option>
-        </select> 
-    
-        <p>e/ou ano-mês (exemplo: 2021-07):</p>
-        <input class="yearMonth" type="text" [(ngModel)]="yearMonth">
+    <h1>Salário e Comissões</h1>
+    <div class="req-rel">
+        <p>Digite o ano-mês "aaaa-mm" (exemplo: 2021-07) e o número do CRECI do corretor:</p>
+        <form action="" method="get">
+            <input class="input-date" type="text" matInput placeholder="digite a data" [(ngModel)]="periodo" name="periodo" required> 
+            <input class="input-date" type="text" matInput placeholder="digite o creci" [(ngModel)]="creci" name="creci" required> 
+        </form> 
+        <button type="submit" (click)="getReadData()" color="primary">enviar</button>
     </div>
 
-    <table mat-table [dataSource]="payment | filter:tipoCorretor | filter:yearMonth">
-        <ng-container matColumnDef="nomeCorretor">
+    <table mat-table [dataSource]="paymentBroker">
+        <ng-container matColumnDef="nome">
             <th mat-header-cell *matHeaderCellDef>Nome do Corretor</th>
-            <td mat-cell *matCellDef="let row">{{row.nomeCorretor}}</td>
+            <td mat-cell *matCellDef="let row">{{row.nome}}</td>
         </ng-container>
 
-        <ng-container matColumnDef="tipoCorretor">
+        <ng-container matColumnDef="tipo">
             <th mat-header-cell *matHeaderCellDef>Tipo do Empregado</th>
-            <td mat-cell *matCellDef="let row">{{row.tipoCorretor}}</td>
+            <td mat-cell *matCellDef="let row">{{row.tipo}}</td>
         </ng-container>
 
-        <ng-container matColumnDef="valorRecebido">
+        <ng-container matColumnDef="total_pagar">
             <th mat-header-cell *matHeaderCellDef>Total ganho</th>
-            <td mat-cell *matCellDef="let row">{{row.valorRecebido}}</td>
+            <td mat-cell *matCellDef="let row">{{row.total_pagar | currency: 'BRL'}}</td>
         </ng-container>
 
-        <ng-container matColumnDef="dataAdmissao">
+        <ng-container matColumnDef="data">
             <th mat-header-cell *matHeaderCellDef>Data</th>
-            <td mat-cell *matCellDef="let row">{{row.dataAdmissao}}</td>
-        </ng-container>
-
-        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-    </table>
-
-    <br>
-
-    <h1>Contratados</h1>
-    <div class="search select-box">
-        <p>Se preferir, selecione o nome do corretor:</p>
-        <select [(ngModel)]="tipoCorretor">
-            <option class="size-input" [ngValue]="nomeCorretor.nomeCorretor" *ngFor="let nomeCorretor of brokers2">{{nomeCorretor.nomeCorretor}}</option>
-        </select> 
-    
-        <p>e/ou ano-mês (exemplo: 2021-07):</p>
-        <input class="yearMonth" type="text" [(ngModel)]="yearMonth2">
-    </div>
-
-    <table mat-table [dataSource]="payment2 | filter:tipoCorretor | filter:yearMonth2">
-        <ng-container matColumnDef="nomeCorretor">
-            <th mat-header-cell *matHeaderCellDef>Nome do Corretor</th>
-            <td mat-cell *matCellDef="let row">{{row.nomeCorretor}}</td>
-        </ng-container>
-
-        <ng-container matColumnDef="tipoCorretor">
-            <th mat-header-cell *matHeaderCellDef>Tipo do Empregado</th>
-            <td mat-cell *matCellDef="let row">{{row.tipoCorretor}}</td>
-        </ng-container>
-
-        <ng-container matColumnDef="valorRecebido">
-            <th mat-header-cell *matHeaderCellDef>Total ganho</th>
-            <td mat-cell *matCellDef="let row">{{row.valorRecebido}}</td>
-        </ng-container>
-
-        <ng-container matColumnDef="dataAdmissao">
-            <th mat-header-cell *matHeaderCellDef>Data</th>
-            <td mat-cell *matCellDef="let row">{{row.dataAdmissao}}</td>
+            <td mat-cell *matCellDef="let row">{{row.data}}</td>
         </ng-container>
 
         <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>

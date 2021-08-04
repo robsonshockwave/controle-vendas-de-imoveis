@@ -16,8 +16,8 @@ export class ReportService {
     return this.http.get<Report[]>(this.baseUrl)
   }
 
-  readData(coco: any): Observable<Report[]> {
-    const url = `${this.baseUrl}/${coco}`;
+  readData(dateGet: any): Observable<Report[]> {
+    const url = `${this.baseUrl}/${dateGet}`;
     return this.http.get<Report[]>(url).pipe(
       map((obj) => obj )
     );  

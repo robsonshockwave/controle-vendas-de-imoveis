@@ -1,7 +1,7 @@
 export interface Payment {
     id?: number
-    nomeCorretor: string
-    tipoCorretor: string
-    dataAdmissao?: Date | null
-    valorRecebido?: number | null
+    nome: string
+    tipo: string
+    data?: Date | null
+    total_pagar?: number | null
 }

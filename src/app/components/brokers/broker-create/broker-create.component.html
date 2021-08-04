@@ -3,11 +3,11 @@
     <form>
         <mat-form-field>
             <input matInput placeholder="Nome do Corretor"
-                [(ngModel)]="brokers.nomeCorretor" name="nomeCorretor">
+                [(ngModel)]="brokers.nomeCorretor" name="nomeCorretor" required>
         </mat-form-field>
         <mat-form-field>
             <input matInput placeholder="Número do CRECI"
-                [(ngModel)]="brokers.creci" name="creci" type="number">
+                [(ngModel)]="brokers.creci" name="creci" type="number" required>
         </mat-form-field>
         <mat-form-field class="brokers-color">
             Tipo <span>(bloqueará inserção(ões) de acordo com a escolha)</span>: 

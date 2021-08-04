@@ -1,5 +1,7 @@
 button {
   margin-bottom: 30px;
+  background: #6b11be;
+  color: white;
 }
 
 button:hover {

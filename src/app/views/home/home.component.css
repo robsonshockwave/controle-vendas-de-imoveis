@@ -7,3 +7,10 @@
 .home .subtitle {
   font-size: 1.1rem;
 }
+
+.alert-text {
+  font-size: 0.8rem;
+  font-weight: bold;
+  margin-top: 15px;
+  color: red;
+}

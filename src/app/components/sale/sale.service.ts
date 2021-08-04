@@ -10,10 +10,10 @@ import { map, catchError } from "rxjs/operators";
 })
 export class SaleService {
   //baseUrl = "http://localhost:3001/sales";
-  urlCreate = "http://localhost:3001/api/vendasComissionado"
+  urlCreate = "http://localhost:3001/api/vendas"
 
   constructor(private snackBar: MatSnackBar, private http: HttpClient) { }
-
+ 
   showMessage(msg: string, isError: boolean = false): void {
     this.snackBar.open(msg, "X", {
       duration: 3000,

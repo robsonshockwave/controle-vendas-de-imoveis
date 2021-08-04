@@ -1,8 +1,9 @@
 <div class="max-wid mat-elevation">
+    <h1>Relatório Gerencial</h1>
     <div class="req-rel">
-        <p>Se preferir, digite o ano-mês (exemplo: 2021-07):</p>
+        <p>Digite o ano-mês "aaaa-mm" (exemplo: 2021-07):</p>
         <form action="" method="get">
-            <input class="input-date" type="text" matInput placeholder="digite a data" [(ngModel)]="coco" name="coco"> 
+            <input class="input-date" type="text" matInput placeholder="digite a data" [(ngModel)]="dateGet" name="dateGet" required> 
         </form>
         <button type="submit" (click)="getReadData()" color="primary">enviar</button>
     </div> 
@@ -45,6 +46,7 @@
                             &nbsp;&nbsp;
                             <i>Faturamento: </i>{{nome.faturamento}},
                         </span>
+                        &nbsp;
                     </span>
                 </td>
             </ng-container>
@@ -58,6 +60,7 @@
                             &nbsp;&nbsp;
                             <i>Pago: </i>{{nome.pagamento}},
                         </span>
+                        &nbsp;
                     </span>
                 </td>
             </ng-container>
@@ -69,6 +72,7 @@
                         <span class="block">
                             {{nome.nome}}  
                         </span>
+                        &nbsp;
                     </span>
                 </td>
             </ng-container>
@@ -82,6 +86,8 @@
             <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
         </table>
     </div>
+
+    <hr>
 
     <button>
         <a id="download">Gerar PDF do Relatório</a>

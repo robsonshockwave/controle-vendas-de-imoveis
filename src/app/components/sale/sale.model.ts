@@ -5,4 +5,5 @@ export interface Sale {
     valorVenda: number
     comprador: string
     dataVenda: Date
-}
+    imovel: number
+} 

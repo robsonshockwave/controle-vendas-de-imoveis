@@ -1,7 +1,8 @@
 <div class="max-wid mat-elevation">
+    <h2>Corretores Cadastrados</h2>
     <div class="select-box">
         <p>Se preferir, selecione o tipo do empregado:</p>
-        <select [(ngModel)]="teste" name="tipo">
+        <select [(ngModel)]="search" name="tipo">
             <option value="">Todos</option>
             <option value="Contratado">Contratado</option>
             <option value="Comissionado">Comissionado</option>
@@ -9,7 +10,7 @@
     </div>
 
     <h1>Contratados</h1>
-    <table mat-table [dataSource]="brokers2 |filter:teste">
+    <table mat-table [dataSource]="brokers2 |filter:search">
         <ng-container matColumnDef="nomeCorretor">
             <th mat-header-cell *matHeaderCellDef>Nome do Corretor</th>
             <td mat-cell *matCellDef="let row">{{row.nomeCorretor}}</td>
@@ -32,12 +33,7 @@
 
         <ng-container matColumnDef="dataAdmissao">
             <th mat-header-cell *matHeaderCellDef>Data de Admissão</th>
-            <td mat-cell *matCellDef="let row">{{row.dataAdmissao ? row.dataAdmissao : "Não Contém"}}</td>
-        </ng-container>
-
-        <ng-container matColumnDef="percentualComissao">
-            <th mat-header-cell *matHeaderCellDef>Percentual de Comissão %</th>
-            <td mat-cell *matCellDef="let row">{{row.percentualComissao ? row.percentualComissao : "Não Contém"}}</td>
+            <td mat-cell *matCellDef="let row">{{row.dataAdmissao | date: 'mediumDate'}}</td>
         </ng-container>
 
         <ng-container matColumnDef="action">
@@ -58,7 +54,7 @@
     <br>
 
     <h1>Comissionados</h1> 
-    <table mat-table [dataSource]="brokers |filter:teste">
+    <table mat-table [dataSource]="brokers |filter:search">
         <ng-container matColumnDef="nomeCorretor">
             <th mat-header-cell *matHeaderCellDef>Nome do Corretor</th>
             <td mat-cell *matCellDef="let row">{{row.nomeCorretor}}</td>
@@ -72,16 +68,6 @@
         <ng-container matColumnDef="creci">
             <th mat-header-cell *matHeaderCellDef>Nº CRECI</th>
             <td mat-cell *matCellDef="let row">{{row.creci}}</td>
-        </ng-container>
-
-        <ng-container matColumnDef="salario">
-            <th mat-header-cell *matHeaderCellDef>Salário</th>
-            <td mat-cell *matCellDef="let row">{{row.salario ? (row.salario | currency: 'BRL') : "Não Contém"}}</td>
-        </ng-container>
-
-        <ng-container matColumnDef="dataAdmissao">
-            <th mat-header-cell *matHeaderCellDef>Data de Admissão</th>
-            <td mat-cell *matCellDef="let row">{{row.dataAdmissao ? row.dataAdmissao : "Não Contém"}}</td>
         </ng-container>
 
         <ng-container matColumnDef="percentualComissao">

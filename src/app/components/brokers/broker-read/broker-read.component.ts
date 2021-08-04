@@ -11,8 +11,8 @@ export class BrokerReadComponent implements OnInit {
 
   brokers: Brokers[]
   brokers2: Brokers[]
-  teste: string
-  displayedColumns = ['tipo', 'nomeCorretor', 'creci', 'salario', 'percentualComissao', 'action']
+  search: string
+  displayedColumns = ['tipo', 'nomeCorretor', 'creci', 'percentualComissao', 'action']
   displayedColumns2 = ['tipo', 'nomeCorretor', 'creci', 'salario', 'dataAdmissao', 'action']
 
   constructor(private brokersService: BrokersService) { }

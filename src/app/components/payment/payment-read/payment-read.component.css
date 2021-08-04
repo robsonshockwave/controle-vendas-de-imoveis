@@ -9,11 +9,38 @@ p {
   margin: 0 5px 0 10px;
 }
 
-h1 {
-  margin: 10px 0px -10px 15px;
-  font-size: 1.1rem;
-  color: purple;
-  text-shadow: rebeccapurple;
+button {
+  background-color: blueviolet;
+  margin-top: 20px;
+  color: white;
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:hover {
+  font-size: 0.9rem;
+}
+
+.req-rel {
+  display: flex;
+  align-items: center;
+}
+
+.req-rel input {
+  margin-right: 10px;
+}
+
+.req-rel button {
+  margin: 0;
+  padding: 5px;
+}
+
+.input-date {
+  border: 1px solid purple;
+  border-radius: 15px;
 }
 
 .select-box {

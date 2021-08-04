@@ -11,7 +11,7 @@ export class SaleReadComponent implements OnInit {
 
   sale: Sale[]
   teste: string
-  displayedColumns = ['codigo', 'nomeCorretor', 'valorVenda', 'comprador', 'dataVenda']
+  displayedColumns = ['codigo', 'creci', 'valorVenda', 'comprador', 'dataVenda']
 
   constructor(private saleService: SaleService) { }
 

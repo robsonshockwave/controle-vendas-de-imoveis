@@ -10,7 +10,7 @@ import { ReportService } from '../report.service';
 export class ReportReadComponent implements OnInit {
 
   teste: any
-  coco: []
+  dateGet: []
   report: Report[]
   yearMonth: string
   displayedColumns = ['periodo', 'faturamento', 'lucro', 'qtdImoveisVendidos', 'qtdImoveisEncalhados', 'listaFaturamentoCorretores', 'listaPagamento', 'funcionarioMes']
@@ -27,8 +27,8 @@ export class ReportReadComponent implements OnInit {
   }
 
   getReadData(): void {
-    this.reportService.readData(this.coco).subscribe(reporttt => {
-      this.teste = new Array(reporttt)
+    this.reportService.readData(this.dateGet).subscribe(report => {
+      this.teste = new Array(report)
       // console.log(this.data) 
     })
   }

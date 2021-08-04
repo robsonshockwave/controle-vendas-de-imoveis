@@ -1,5 +1,4 @@
 <div class="max-wid mat-elevation">
-    <!---->
     <div class="req-rel">
         <p>Se preferir, digite o ano-mês (exemplo: 2021-07):</p>
         <form action="" method="get">
@@ -15,8 +14,8 @@
     </div>
     -->
 
-    <div id="to_pdf" *ngIf="report">
-        <table mat-table [dataSource]="report">
+    <div id="to_pdf" *ngIf="teste">
+        <table mat-table [dataSource]="teste">
             <ng-container matColumnDef="faturamento">
                 <th mat-header-cell *matHeaderCellDef>Faturamento Total</th>
                 <td mat-cell *matCellDef="let row">{{row.faturamento}}</td>

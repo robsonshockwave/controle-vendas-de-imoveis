@@ -28,9 +28,8 @@ export class ReportReadComponent implements OnInit {
 
   getReadData(): void {
     this.reportService.readData(this.coco).subscribe(reporttt => {
-      this.report = reporttt
+      this.teste = new Array(reporttt)
       // console.log(this.data) 
-      console.log(reporttt)
     })
   }
 }

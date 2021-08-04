@@ -1,11 +1,10 @@
 export interface Report {
-    id?: number
-    faturamentoTotal: number
-    lucroImboliaria: number
-    imoveisVendidos: number
-    imoveisEncalhados: number
-    faturamentoCorretor: []
-    valorPagoCorretor: []
-    corretorDoMes: string
-    data: Date
+    faturamento: number
+    lucro: number
+    qtdImoveisVendidos: number
+    qtdImoveisEncalhados: number
+    listaFaturamentoCorretores: []
+    listaPagamento: []
+    periodo: Date 
+    funcionarioMes: []
 }

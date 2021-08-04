@@ -1,6 +1,7 @@
 <div class="max-wid mat-elevation">
   <p>Se preferir, selecione o tipo:</p>
   <select [(ngModel)]="teste" name="tipo">
+    <option value="">Todos</option>
     <option value="Casa">Casa</option>
     <option value="Apartamento">Apartamento</option>
     <option value="Sala Comercial">Sala Comercial</option>
@@ -53,12 +54,12 @@
     <ng-container matColumnDef="action">
       <th mat-header-cell *matHeaderCellDef>Ações</th>
       <td mat-cell *matCellDef="let row">
-          <a routerLink="/products/update/{{ row.id }}" class="edit">
+          <a routerLink="/products/update/{{ row.codigo }}" class="edit">
               <i class="material-icons">
                   edit
               </i>
           </a>
-          <a routerLink="/products/delete/{{ row.id }}" class="delete">
+          <a routerLink="/products/delete/{{ row.codigo }}" class="delete">
               <i class="material-icons">
                   delete
               </i>

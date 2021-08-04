@@ -2,6 +2,18 @@ table {
   width: 100%;
 }
 
+.select-box {
+  display: flex;
+  justify-content: flex-end;
+}
+
+h1 {
+  margin: 10px 0px 0 15px;
+  font-size: 1.1rem;
+  color: purple;
+  text-shadow: rebeccapurple;
+}
+
 p {
   font-size: 0.8rem;
   color: #575757;

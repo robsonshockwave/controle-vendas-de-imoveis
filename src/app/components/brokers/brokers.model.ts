@@ -1,5 +1,5 @@
 export interface Brokers {
-    id?: number
+    id?: string
     nomeCorretor: string
     creci: string
     tipo: string

@@ -8,7 +8,7 @@ import { Report } from './report.model';
   providedIn: 'root'
 })
 export class ReportService {
-  baseUrl = "http://localhost:3001/reports";
+  baseUrl = "http://localhost:3001/api/relatorio";
 
   constructor(private http: HttpClient) { }
 
@@ -16,8 +16,8 @@ export class ReportService {
     return this.http.get<Report[]>(this.baseUrl)
   }
 
-  readData(data: string): Observable<Report[]> {
-    const url = `${this.baseUrl}?data=${data}`;
+  readData(coco: any): Observable<Report[]> {
+    const url = `${this.baseUrl}/${coco}`;
     return this.http.get<Report[]>(url).pipe(
       map((obj) => obj )
     );  

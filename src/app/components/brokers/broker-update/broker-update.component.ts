@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Brokers } from '../brokers.model';
 import { BrokersService } from '../brokers.service';
 
@@ -11,14 +11,33 @@ import { BrokersService } from '../brokers.service';
 export class BrokerUpdateComponent implements OnInit {
   brokers: Brokers;
 
-  constructor(private brokersService: BrokersService, private router: Router) { }
+  constructor(private brokersService: BrokersService, 
+    private router: Router, 
+    private route: ActivatedRoute) { }
 
   ngOnInit(): void {
-    
+    const creci = this.route.snapshot.paramMap.get("creci");
+    this.brokersService.readByCreci(creci).subscribe((broker) => {
+      this.brokers = broker;
+    });
   }
 
   updateBroker(): void {
+  const creci = this.route.snapshot.paramMap.get("creci");
 
+    this.brokersService.update(this.brokers, creci).subscribe(() => {
+      this.brokersService.showMessage("Corretor atualizado com sucesso!");
+      this.router.navigate(["/brokers"]);
+    });
+  }
+
+  updateBroker2(): void {
+    const creci = this.route.snapshot.paramMap.get("creci");
+
+    this.brokersService.update2(this.brokers, creci).subscribe(() => {
+      this.brokersService.showMessage("Corretor atualizado com sucesso!");
+      this.router.navigate(["/brokers"]);
+    });
   }
 
   cancel(): void {

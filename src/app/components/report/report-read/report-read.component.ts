@@ -9,27 +9,29 @@ import { ReportService } from '../report.service';
 })
 export class ReportReadComponent implements OnInit {
 
-  data: string
+  teste: any
+  coco: []
   report: Report[]
   yearMonth: string
-  displayedColumns = ['faturamentoTotal', 'lucroImobiliaria', 'imoveisVendidos', 'imoveisEncalhados', 'faturamentoCorretor', 'valorPagoCorretor', 'corretorDoMes', 'data']
+  displayedColumns = ['faturamento', 'lucro', 'qtdImoveisVendidos', 'qtdImoveisEncalhados', 'listaFaturamentoCorretores', 'periodo', 'listaPagamento', 'funcionarioMes']
 
   constructor(private reportService: ReportService) { }
 
   ngOnInit(): void {
-
+    /*
     this.reportService.read().subscribe(report => { 
       this.report = report
       console.log(report)
     })
-
+    */
   }
 
   getReadData(): void {
-    this.reportService.readData(this.data).subscribe(report => {
-      this.report = report
-      //console.log(this.data) 
-      console.log(report)
+    this.reportService.readData(this.coco).subscribe(reporttt => {
+      this.report = reporttt
+      // console.log(this.data) 
+      console.log(reporttt)
     })
   }
 }
+

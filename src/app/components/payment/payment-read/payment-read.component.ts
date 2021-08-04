@@ -12,11 +12,13 @@ import { PaymentService } from '../payment.service';
 export class PaymentReadComponent implements OnInit {
 
   payment: Payment[]
+  payment2: Payment[]
   tipoCorretor: string
   yearMonth: string
-  displayedColumns = ['nomeCorretor', 'tipoCorretor', 'valorRecebido', 'dataAdmissao']
-
+  yearMonth2: string
   brokers: Brokers[]
+  brokers2: Brokers[]
+  displayedColumns = ['nomeCorretor', 'tipoCorretor', 'valorRecebido', 'dataAdmissao']
 
   constructor(private paymentService: PaymentService, private brokersService: BrokersService) { }
 
@@ -27,6 +29,14 @@ export class PaymentReadComponent implements OnInit {
     
     this.brokersService.read().subscribe(broker => {
       this.brokers = broker
+    })
+
+    this.paymentService.read2().subscribe(payment => { 
+      this.payment2 = payment
+    })
+    
+    this.brokersService.read2().subscribe(broker => {
+      this.brokers2 = broker
     })
   }
 

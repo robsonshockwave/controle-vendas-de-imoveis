@@ -3,10 +3,10 @@
     <div class="req-rel">
         <p>Se preferir, digite o ano-mês (exemplo: 2021-07):</p>
         <form action="" method="get">
-            <input type="text" matInput placeholder="digite a data" [(ngModel)]="data" name="data"> 
+            <input type="text" matInput placeholder="digite a data" [(ngModel)]="coco" name="coco"> 
         </form>
         <button type="submit" (click)="getReadData()" color="primary">enviar</button>
-    </div>
+    </div> 
 
     <!--
     <div class="search">
@@ -15,32 +15,32 @@
     </div>
     -->
 
-    <div id="to_pdf">
-        <table mat-table [dataSource]="report | filter:yearMonth">
-            <ng-container matColumnDef="faturamentoTotal">
+    <div id="to_pdf" *ngIf="report">
+        <table mat-table [dataSource]="report">
+            <ng-container matColumnDef="faturamento">
                 <th mat-header-cell *matHeaderCellDef>Faturamento Total</th>
-                <td mat-cell *matCellDef="let row">{{row.faturamentoTotal}}</td>
+                <td mat-cell *matCellDef="let row">{{row.faturamento}}</td>
             </ng-container>
     
-            <ng-container matColumnDef="lucroImobiliaria">
+            <ng-container matColumnDef="lucro">
                 <th mat-header-cell *matHeaderCellDef>Lucro da Imobiliária</th>
-                <td mat-cell *matCellDef="let row">{{row.lucroImobiliaria}}</td>
+                <td mat-cell *matCellDef="let row">{{row.lucro}}</td>
             </ng-container>
     
-            <ng-container matColumnDef="imoveisVendidos">
+            <ng-container matColumnDef="qtdImoveisVendidos">
                 <th mat-header-cell *matHeaderCellDef>Nº Imóveis Vendidos</th>
-                <td mat-cell *matCellDef="let row">{{row.imoveisVendidos}}</td>
+                <td mat-cell *matCellDef="let row">{{row.qtdImoveisVendidos}}</td>
             </ng-container>
     
-            <ng-container matColumnDef="imoveisEncalhados">
+            <ng-container matColumnDef="qtdImoveisEncalhados">
                 <th mat-header-cell *matHeaderCellDef>Nº Imóveis Encalhados</th>
-                <td mat-cell *matCellDef="let row">{{row.imoveisEncalhados}}</td>
+                <td mat-cell *matCellDef="let row">{{row.qtdImoveisEncalhados}}</td>
             </ng-container>
     
-            <ng-container matColumnDef="faturamentoCorretor">
+            <ng-container matColumnDef="listaFaturamentoCorretores">
                 <th mat-header-cell *matHeaderCellDef>Faturamento dos Corretores</th>
                 <td mat-cell *matCellDef="let row">
-                    <span *ngFor="let nome of row.faturamentoCorretor">
+                    <span *ngFor="let nome of row.listaFaturamentoCorretores">
                         <span class="block">
                             <i>Nome: </i>{{nome.nome}}  
                             &nbsp;&nbsp;
@@ -50,36 +50,41 @@
                 </td>
             </ng-container>
     
-            <ng-container matColumnDef="valorPagoCorretor">
+            <ng-container matColumnDef="listaPagamento">
                 <th mat-header-cell *matHeaderCellDef>Valor Pago aos Corretores</th>
                 <td mat-cell *matCellDef="let row">
-                    <span *ngFor="let nome of row.valorPagoCorretor">
+                    <span *ngFor="let nome of row.listaPagamento">
                         <span class="block">
                             <i>Nome: </i>{{nome.nome}}  
                             &nbsp;&nbsp;
-                            <i>Pago: </i>{{nome.pago}},
+                            <i>Pago: </i>{{nome.pagamento}},
                         </span>
                     </span>
                 </td>
             </ng-container>
-    
-            <ng-container matColumnDef="corretorDoMes">
-                <th mat-header-cell *matHeaderCellDef>Corretor do Mês</th>
-                <td mat-cell *matCellDef="let row">{{row.corretorDoMes}}</td>
+
+            <ng-container matColumnDef="funcionarioMes">
+                <th mat-header-cell *matHeaderCellDef>Corretor(es) do mês</th>
+                <td mat-cell *matCellDef="let row">
+                    <span *ngFor="let nome of row.funcionarioMes">
+                        <span class="block">
+                            <i>Nome: </i>{{nome.nome}}  
+                        </span>
+                    </span>
+                </td>
             </ng-container>
-    
-            <ng-container matColumnDef="data">
+
+            <ng-container matColumnDef="periodo">
                 <th mat-header-cell *matHeaderCellDef>Data</th>
-                <td mat-cell *matCellDef="let row">{{row.data}}</td>
+                <td mat-cell *matCellDef="let row">{{row.periodo}}</td>
             </ng-container>
     
             <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
             <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
         </table>
     </div>
+
     <button>
         <a id="download">Gerar PDF do Relatório</a>
     </button>
 </div>
-
-

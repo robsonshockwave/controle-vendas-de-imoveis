@@ -9,7 +9,8 @@ import { map, catchError } from "rxjs/operators";
   providedIn: "root",
 })
 export class ProductService {
-  baseUrl = "http://localhost:3001/products";
+  //baseUrl = "http://localhost:3001/products";
+  //UrlCreate = "http://localhost:3001/products";
   UrlCreate = "http://localhost:3001/api/imoveis"
 
   constructor(private snackBar: MatSnackBar, private http: HttpClient) {}
@@ -31,32 +32,32 @@ export class ProductService {
   }
 
   read(): Observable<Product[]> {
-    return this.http.get<Product[]>(this.baseUrl).pipe(
+    return this.http.get<Product[]>(this.UrlCreate).pipe(
       map((obj) => obj),
       catchError((e) => this.errorHandler(e))
     );
   }
 
-  readById(id: number): Observable<Product> {
-    const url = `${this.baseUrl}/${id}`;
+  readById(codigo: string): Observable<Product> {
+    const url = `${this.UrlCreate}/${codigo}`;
     return this.http.get<Product>(url).pipe(
       map((obj) => obj),
       catchError((e) => this.errorHandler(e))
     );
   }
 
-  update(product: Product): Observable<Product> {
-    const url = `${this.baseUrl}/${product.id}`;
-    return this.http.put<Product>(url, product).pipe(
+  update(product: Product, codigo: string): Observable<Product> {
+    const url = `${this.UrlCreate}/${codigo}`;
+    return this.http.patch<Product>(url, product).pipe(
       map((obj) => obj),
       catchError((e) => this.errorHandler(e))
     );
   }
 
-  delete(id: number): Observable<Product> {
-    const url = `${this.baseUrl}/${id}`;
+  delete(codigo: string): Observable<Product> {
+    const url = `${this.UrlCreate}/${codigo}`;
     return this.http.delete<Product>(url).pipe(
-      map((obj) => obj),
+      map((obj) => obj),  
       catchError((e) => this.errorHandler(e))
     );
   }

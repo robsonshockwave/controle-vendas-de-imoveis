@@ -10,6 +10,8 @@ import { map, catchError } from "rxjs/operators";
 })
 export class BrokersService {
   baseUrl = "http://localhost:3001/brokers";
+  urlContratado = "http://localhost:3001/api/corretorContratado";
+  urlComissionado = "http://localhost:3001/api/corretorComissionado";
 
   constructor(private snackBar: MatSnackBar, private http: HttpClient) { }
 
@@ -22,12 +24,42 @@ export class BrokersService {
     });
   }
 
+  readByCreci(creci: string): Observable<Brokers> {
+    const url = `${this.urlComissionado}/${creci}`;
+    return this.http.get<Brokers>(url).pipe(
+      map((obj) => obj)
+    );
+  }
+
   create(brokers: Brokers): Observable<Brokers> {
-    console.log(brokers)
-    return this.http.post<Brokers>(this.baseUrl, brokers)
+    if(brokers.tipo === "Comissionado") {
+      return this.http.post<Brokers>(this.urlComissionado, brokers)
+    } else {
+      return this.http.post<Brokers>(this.urlContratado, brokers)
+    }
   }
 
   read(): Observable<Brokers[]> {
-    return this.http.get<Brokers[]>(this.baseUrl)
+    return this.http.get<Brokers[]>(this.urlComissionado)
   }
-}
+
+  read2(): Observable<Brokers[]> {
+    return this.http.get<Brokers[]>(this.urlContratado)
+  }
+
+  update(brokers: Brokers, creci: string): Observable<Brokers> {
+    console.log(brokers.creci)
+    const url = `${this.urlContratado}/${creci}`;
+    return this.http.patch<Brokers>(url, brokers).pipe(
+      map((obj) => obj),
+    );
+  }
+
+  update2(brokers: Brokers, creci: string): Observable<Brokers> {
+    console.log(brokers)
+    const url = `${this.urlComissionado}/${creci}`;
+    return this.http.patch<Brokers>(url, brokers).pipe(
+      map((obj) => obj),
+    );
+  }
+}  

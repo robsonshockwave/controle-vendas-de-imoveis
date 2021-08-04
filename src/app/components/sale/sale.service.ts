@@ -9,7 +9,8 @@ import { map, catchError } from "rxjs/operators";
   providedIn: 'root'
 })
 export class SaleService {
-  baseUrl = "http://localhost:3001/sales";
+  //baseUrl = "http://localhost:3001/sales";
+  urlCreate = "http://localhost:3001/api/vendasComissionado"
 
   constructor(private snackBar: MatSnackBar, private http: HttpClient) { }
 
@@ -23,10 +24,10 @@ export class SaleService {
   }
 
   create(sale: Sale): Observable<Sale> {
-    return this.http.post<Sale>(this.baseUrl, sale)
+    return this.http.post<Sale>(this.urlCreate, sale)
   }
 
   read(): Observable<Sale[]> {
-    return this.http.get<Sale[]>(this.baseUrl)
+    return this.http.get<Sale[]>(this.urlCreate) 
   }
 }

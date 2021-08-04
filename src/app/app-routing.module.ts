@@ -29,11 +29,11 @@ const routes: Routes = [
     component: ProductCreateComponent
   },
   {
-    path: "products/update/:id",
+    path: "products/update/:codigo",
     component: ProductUpdateComponent
   },
   {
-    path: "products/delete/:id",
+    path: "products/delete/:codigo",
     component: ProductDeleteComponent
   },
   {
@@ -45,7 +45,7 @@ const routes: Routes = [
     component: BrokerCreateComponent
   },
   {
-    path: "brokers/update/:id",
+    path: "brokers/update/:creci",
     component: BrokerUpdateComponent
   },
   {

@@ -12,6 +12,18 @@ h2 {
   margin-bottom: 0;
 }
 
+.img {
+  display: flex;
+}
+
+.img2 {
+  margin: 5px 0 0 5px;
+}
+
+.img2 img {
+  border-radius: 9px;
+}
+
 p {
   font-size: 0.8rem;
   color: #575757;

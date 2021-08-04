@@ -18,11 +18,12 @@ button {
 
 h6 {
   margin-top: 10px;
-  color: grey;
+  color: purple;
 }
 
 span {
   font-size: 0.7rem;
+  color: grey;
 }
 
 #dataName {

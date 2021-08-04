@@ -29,8 +29,14 @@
     <ng-container matColumnDef="imagem1">
       <th mat-header-cell *matHeaderCellDef>Imagem</th>
       <td mat-cell *matCellDef="let row">
-        <img class="image-column" src="{{ row.imagem1 }}" width="100" height="100" alt="Imagem">
-        <a href="{{ row.imagem1 }}" target="_blank" class="original-photo">abrir foto original</a>
+        <div class="img">
+          <img class="image-column" src="{{ row.imagem1 }}" width="120" height="120" alt="Imagem">
+          <div class="img2">
+            <img class="image-column" src="{{ row.imagem2 }}" width="50" height="50" alt="Imagem">
+            <img class="image-column" src="{{ row.imagem3 }}" width="50" height="50" alt="Imagem">
+          </div>
+        </div>
+        <a href="{{ row.imagem1 }}" target="_blank" class="original-photo">&rarr; abrir foto original</a>
       </td>
     </ng-container>
 

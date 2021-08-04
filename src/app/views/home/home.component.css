@@ -12,5 +12,10 @@
   font-size: 0.8rem;
   font-weight: bold;
   margin-top: 15px;
+  color: #c72a2a;
+}
+
+span {
+  font-size: 0.9rem;
   color: red;
 }

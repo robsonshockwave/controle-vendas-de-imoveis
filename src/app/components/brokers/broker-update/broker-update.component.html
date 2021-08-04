@@ -1,5 +1,5 @@
 <mat-card>
-    <mat-card-title>Alterar Corretor</mat-card-title>
+    <mat-card-title>Alterar Corretor <span> *Pode alterar apenas o que você deseja, mas é preciso selecionar o tipo do corretor</span></mat-card-title>
     <form>
         <mat-form-field class="brokers-color">Tipo <span>(bloqueará inserção(ões) de acordo com a escolha)</span>: 
             <select matInput [(ngModel)]="brokers.tipo" name="tipo" id="verificacao" onchange="verifica2(this.value)">

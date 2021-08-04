@@ -10,16 +10,22 @@ p {
 }
 
 h1 {
-  margin: 10px 0px 0 15px;
+  margin: 10px 0px -10px 15px;
   font-size: 1.1rem;
   color: purple;
   text-shadow: rebeccapurple;
+}
+
+.select-box {
+  display: flex;
+  justify-content: flex-end;
 }
 
 select,
 .yearMonth {
   border: 1px solid purple;
   border-radius: 15px;
+  max-width: 100px;
 }
 
 .edit {

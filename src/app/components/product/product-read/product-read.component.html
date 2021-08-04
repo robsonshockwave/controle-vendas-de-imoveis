@@ -1,15 +1,17 @@
 <div class="max-wid mat-elevation">
-  <p>Se preferir, selecione o tipo:</p>
-  <select [(ngModel)]="teste" name="tipo">
-    <option value="">Todos</option>
-    <option value="Casa">Casa</option>
-    <option value="Apartamento">Apartamento</option>
-    <option value="Sala Comercial">Sala Comercial</option>
-    <option value="Lote">Lote</option>
-    <option value="Sítio">Sítio</option>
-    <option value="Chácara">Chácara</option>
-    <option value="Fazenda">Fazenda</option>
-  </select>
+  <div class="select-box">
+    <p>Se preferir, selecione o tipo:</p>
+    <select [(ngModel)]="teste" name="tipo">
+      <option value="">Todos</option>
+      <option value="Casa">Casa</option>
+      <option value="Apartamento">Apartamento</option>
+      <option value="Sala Comercial">Sala Comercial</option>
+      <option value="Lote">Lote</option>
+      <option value="Sítio">Sítio</option>
+      <option value="Chácara">Chácara</option>
+      <option value="Fazenda">Fazenda</option>
+    </select>
+  </div>
 
   <table mat-table [dataSource]="products |filter:teste">
 

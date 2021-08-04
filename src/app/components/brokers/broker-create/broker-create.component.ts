@@ -10,7 +10,7 @@ import { Router } from '@angular/router';
 })
 export class BrokerCreateComponent implements OnInit {
 
-  brokers: Brokers = {
+  brokers: Brokers = { 
     nomeCorretor: '',
     creci: '',
     tipo: '',

@@ -16,14 +16,13 @@ export class SaleCreateComponent implements OnInit {
 
   sale: Sale = {
     codigo: null,
-    nomeCorretor: '',
+    creci: '',
     valorVenda: null,
     comprador: '',
     dataVenda: null
   }
 
   product: Product[]
-
   brokers: Brokers[]
   brokers2: Brokers[]
 

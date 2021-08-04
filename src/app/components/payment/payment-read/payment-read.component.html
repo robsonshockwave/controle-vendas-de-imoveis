@@ -1,15 +1,15 @@
 <div class="max-wid mat-elevation">
-    <div class="search">
+    <h1>Comissionados</h1>
+    <div class="search select-box">
         <p>Se preferir, selecione o nome do corretor:</p>
         <select [(ngModel)]="tipoCorretor">
-            <option [ngValue]="nomeCorretor.nomeCorretor" *ngFor="let nomeCorretor of brokers">{{nomeCorretor.nomeCorretor}}</option>
+            <option class="size-input" [ngValue]="nomeCorretor.nomeCorretor" *ngFor="let nomeCorretor of brokers">{{nomeCorretor.nomeCorretor}}</option>
         </select> 
     
         <p>e/ou ano-mês (exemplo: 2021-07):</p>
         <input class="yearMonth" type="text" [(ngModel)]="yearMonth">
     </div>
 
-    <h1>Comissionados</h1>
     <table mat-table [dataSource]="payment | filter:tipoCorretor | filter:yearMonth">
         <ng-container matColumnDef="nomeCorretor">
             <th mat-header-cell *matHeaderCellDef>Nome do Corretor</th>
@@ -38,10 +38,10 @@
     <br>
 
     <h1>Contratados</h1>
-    <div class="search">
+    <div class="search select-box">
         <p>Se preferir, selecione o nome do corretor:</p>
         <select [(ngModel)]="tipoCorretor">
-            <option [ngValue]="nomeCorretor.nomeCorretor" *ngFor="let nomeCorretor of brokers2">{{nomeCorretor.nomeCorretor}}</option>
+            <option class="size-input" [ngValue]="nomeCorretor.nomeCorretor" *ngFor="let nomeCorretor of brokers2">{{nomeCorretor.nomeCorretor}}</option>
         </select> 
     
         <p>e/ou ano-mês (exemplo: 2021-07):</p>

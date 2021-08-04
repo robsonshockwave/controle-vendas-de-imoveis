@@ -32,9 +32,24 @@ export class BrokersService {
   }
 
   create(brokers: Brokers): Observable<Brokers> {
+    console.log(brokers) 
     if(brokers.tipo === "Comissionado") {
+      /*
+      const {creci, nomeCorretor, tipo, percentualComissao} = brokers;
+      const obj = {
+        creci, nomeCorretor, tipo, percentualComissao 
+      }
+      console.log(obj)
+      */
       return this.http.post<Brokers>(this.urlComissionado, brokers)
     } else {
+      /*
+      const {creci, nomeCorretor, tipo, salario, dataAdmissao} = brokers;
+      const obj = {
+        creci, nomeCorretor, tipo, salario, dataAdmissao
+      }
+      console.log(obj)
+      */
       return this.http.post<Brokers>(this.urlContratado, brokers)
     }
   }
@@ -53,7 +68,7 @@ export class BrokersService {
       const {dataAdmissao, percentualComissao} = brokers;
       const obj = {
         dataAdmissao,
-        percentualComissao
+        percentualComissao 
       }
       return this.http.patch<Brokers>(url, obj).pipe(
         map((obj) => obj),

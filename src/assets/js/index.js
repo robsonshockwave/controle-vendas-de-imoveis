@@ -5,7 +5,7 @@ function verifica(value){
 
     if(value == "Contratado"){
         salario.disabled = false;
-        //dataAdmissao.disabled = false;
+        dataAdmissao.disabled = false;
         percentualComissao.disabled = true;
     }else if(value == "Comissionado"){
         salario.disabled = true;

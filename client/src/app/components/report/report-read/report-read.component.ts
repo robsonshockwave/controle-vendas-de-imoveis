@@ -9,7 +9,7 @@ import { ReportService } from '../report.service';
 })
 export class ReportReadComponent implements OnInit {
 
-  teste: any
+  results: any
   dateGet: []
   report: Report[]
   yearMonth: string
@@ -28,7 +28,7 @@ export class ReportReadComponent implements OnInit {
 
   getReadData(): void {
     this.reportService.readData(this.dateGet).subscribe(report => {
-      this.teste = new Array(report)
+      this.results = new Array(report)
       // console.log(this.data) 
     })
   }

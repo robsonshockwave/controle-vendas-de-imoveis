@@ -8,15 +8,8 @@
         <button type="submit" (click)="getReadData()" color="primary">enviar</button>
     </div> 
 
-    <!--
-    <div class="search">
-        <p>Se preferir, digite o ano-mês (exemplo: 2021-07):</p>
-        <input class="yearMonth" type="text" [(ngModel)]="yearMonth">
-    </div>
-    -->
-
-    <div id="to_pdf" *ngIf="teste">
-        <table mat-table [dataSource]="teste">
+    <div id="to_pdf" *ngIf="results">
+        <table mat-table [dataSource]="results">
             <ng-container matColumnDef="faturamento">
                 <th mat-header-cell *matHeaderCellDef>Faturamento Total</th>
                 <td mat-cell *matCellDef="let row">{{row.faturamento}}</td>

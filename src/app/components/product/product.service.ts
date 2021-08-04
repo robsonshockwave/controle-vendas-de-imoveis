@@ -48,8 +48,18 @@ export class ProductService {
 
   update(product: Product, codigo: string): Observable<Product> {
     const url = `${this.UrlCreate}/${codigo}`;
+    const {dataDeCadastro, descricao, imagem1, imagem2, imagem3, nomeVendedor, preco} = product;
+      const obj = {
+        dataDeCadastro,
+        descricao, 
+        imagem1, 
+        imagem2, 
+        imagem3, 
+        nomeVendedor, 
+        preco
+      }
     console.log(product);
-    return this.http.patch<Product>(url, product).pipe(
+    return this.http.patch<Product>(url, obj).pipe(
       map((obj) => obj),
       catchError((e) => this.errorHandler(e))
     );

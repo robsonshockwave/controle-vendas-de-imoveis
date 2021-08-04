@@ -13,7 +13,7 @@ export class ReportReadComponent implements OnInit {
   coco: []
   report: Report[]
   yearMonth: string
-  displayedColumns = ['faturamento', 'lucro', 'qtdImoveisVendidos', 'qtdImoveisEncalhados', 'listaFaturamentoCorretores', 'periodo', 'listaPagamento', 'funcionarioMes']
+  displayedColumns = ['periodo', 'faturamento', 'lucro', 'qtdImoveisVendidos', 'qtdImoveisEncalhados', 'listaFaturamentoCorretores', 'listaPagamento', 'funcionarioMes']
 
   constructor(private reportService: ReportService) { }
 

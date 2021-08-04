@@ -23,7 +23,7 @@ export class SaleService {
     });
   }
 
-  create(sale: Sale): Observable<Sale> {
+  create(sale: Sale): Observable<Sale> { 
     return this.http.post<Sale>(this.urlCreate, sale)
   }
 

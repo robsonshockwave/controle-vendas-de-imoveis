@@ -25,6 +25,7 @@ export class SaleCreateComponent implements OnInit {
   product: Product[]
 
   brokers: Brokers[]
+  brokers2: Brokers[]
 
   constructor(private saleService: SaleService, 
     private router: Router,
@@ -38,7 +39,11 @@ export class SaleCreateComponent implements OnInit {
 
     this.brokersService.read().subscribe(broker => {
       this.brokers = broker
-    })
+    }) 
+
+    this.brokersService.read2().subscribe(broker => {
+      this.brokers2 = broker
+    }) 
   }
 
   createSale(): void {

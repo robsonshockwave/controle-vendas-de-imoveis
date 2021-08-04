@@ -21,11 +21,14 @@
                 [(ngModel)]="brokers.percentualComissao" name="percentualComissao" id="percentualComissao">
         </mat-form-field>
     </form>
-    <button mat-raised-button (click)="updateBroker2()" color="primary">
+    <button mat-raised-button (click)="updateBroker()" color="primary">
         Salvar
     </button> 
     
     <button mat-raised-button (click)="cancel()">
         Cancelar
     </button>
+
+
+    <h6>Não vai? Talvez seja porque você selecionou o tipo de corretor errado!</h6>
 </mat-card>

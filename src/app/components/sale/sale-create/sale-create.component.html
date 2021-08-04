@@ -7,9 +7,10 @@
             <option [ngValue]="codigo.codigo" *ngFor="let codigo of product">{{codigo.codigo}}</option>
         </select> 
 
-        <p>Nome do Corretor:</p>
-        <select id="nomeCorretor" name="nomeCorretor" [(ngModel)]="sale.nomeCorretor">
-            <option [ngValue]="nomeCorretor.nomeCorretor" *ngFor="let nomeCorretor of brokers">{{nomeCorretor.nomeCorretor}}</option>
+        <p>Número do CRECI:</p>
+        <select id="creci" name="creci" [(ngModel)]="sale.creci"> 
+            <option [ngValue]="creci.creci" *ngFor="let creci of brokers">{{creci.creci}}</option>
+            <option [ngValue]="creci.creci" *ngFor="let creci of brokers2">{{creci.creci}}</option>
         </select> 
 
         <mat-form-field>

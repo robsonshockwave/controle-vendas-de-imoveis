@@ -48,18 +48,34 @@ export class BrokersService {
   }
 
   update(brokers: Brokers, creci: string): Observable<Brokers> {
-    console.log(brokers.creci)
-    const url = `${this.urlContratado}/${creci}`;
-    return this.http.patch<Brokers>(url, brokers).pipe(
-      map((obj) => obj),
-    );
-  }
+    if(brokers.tipo === "Comissionado") {
+      const url = `${this.urlComissionado}/${creci}`;
+      const {dataAdmissao, percentualComissao} = brokers;
+      const obj = {
+        dataAdmissao,
+        percentualComissao
+      }
+      return this.http.patch<Brokers>(url, obj).pipe(
+        map((obj) => obj),
+      );
+    } else {
+      const {dataAdmissao, salario} = brokers;
+      const obj = {
+        dataAdmissao,
+        salario
+      }
+      const url = `${this.urlContratado}/${creci}`;
+      return this.http.patch<Brokers>(url, obj).pipe(
+        map((obj) => obj),
+      );
+    }
+  } 
 
   update2(brokers: Brokers, creci: string): Observable<Brokers> {
     console.log(brokers)
     const url = `${this.urlComissionado}/${creci}`;
     return this.http.patch<Brokers>(url, brokers).pipe(
-      map((obj) => obj),
+      map((obj) => obj), 
     );
   }
 }  

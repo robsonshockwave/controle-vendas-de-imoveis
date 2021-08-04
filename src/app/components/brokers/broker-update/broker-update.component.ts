@@ -31,15 +31,6 @@ export class BrokerUpdateComponent implements OnInit {
     });
   }
 
-  updateBroker2(): void {
-    const creci = this.route.snapshot.paramMap.get("creci");
-
-    this.brokersService.update2(this.brokers, creci).subscribe(() => {
-      this.brokersService.showMessage("Corretor atualizado com sucesso!");
-      this.router.navigate(["/brokers"]);
-    });
-  }
-
   cancel(): void {
     this.router.navigate(['/brokers']);
   }

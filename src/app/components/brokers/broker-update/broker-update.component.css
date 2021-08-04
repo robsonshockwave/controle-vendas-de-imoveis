@@ -16,6 +16,11 @@ button {
   display: none;
 }
 
+h6 {
+  margin-top: 10px;
+  color: grey;
+}
+
 span {
   font-size: 0.7rem;
 }

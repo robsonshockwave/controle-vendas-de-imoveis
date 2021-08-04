@@ -26,8 +26,8 @@ function verifica2(value){
         percentualComissao.style.display = "none";
     }else if(value == "Comissionado"){
         salario.style.display = "none";
-        //dataAdmissao.style.display = "none"
-        //dataName.style.display = "none"
+        dataAdmissao.style.display = "none"
+        dataName.style.display = "none"
         percentualComissao.style.display = "inline";
     }
 };

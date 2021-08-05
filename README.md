@@ -1,60 +1,120 @@
-Criar readme com as informações a seguir
+# ControlaVendas®
 
-1 - Nome do trabalho
-    Nome da materia, professor e universidade
-    Nome dos integrantes do grupo
-    Breve Descrição do trabalho
+![Transferidor UDP](images/banner.png)
 
-2 - Gif da aplicaçao (Pode pular por enquanto)
+## :boom: Este é trabalho final da disciplina COM222 - Desenvolvimento Web!
 
-3- Tecnologias utilizadas
-   MEAN stack
-   M - mongo
-   E - express
-   A - angular
-   N - node
+## :closed_book: Informações do trabalho
 
-  Linguagem: Typescript
+### É um Sistema para Controle de Vendas de Imóveis
 
-4 - Passo a passo para executar o projeto
-   
-Clonar o repositorio: abrir git bash ou o terminal e executar o comando: git clone https://github.com/carloshssouza/TrabalhoFinal-web
+- Disciplina: Desenvolvimento Web
+- Professor: Laercio Baldochi Júnior
+- Universidade: Unifei - Universidade Federal de Itajubá
 
-Abrir um terminal ou git bash a partir da pasta gerada do git clone
+## :construction_worker: Desenvolvido Por
 
-- Instalação dos pacotes
-	Front: 
-		- navegue para o diretório client, utilizando o comando: cd client
-		- execute o comando: npm install
+```
+Carlos Henrique Souza Silva, curso de Sistemas de informação
+-> Matrícula: 2019015979
 
-	backend:
-		- retorne um diretório, utilizando o comando: cd ..
-		- navegue para o diretório server, utilizando o comando: cd server
-		- execute o comando: npm install
-		- mantenha o terminal aberto
-	Pronto, os pacotes foram instalados
+Fauzi Consoli Esper, curso de Sistemas de informação
+-> Matrícula: 27497
 
-Agora, configurar a pasta de dados do mongodb:
-	No diretório server, crie um diretório chamado: data
-	Procure no seu computador, o diretório bin do mongodb (Se o mongodb foi instalado de maneria padrão
-							   geralmente fica em C:\Program Files\MongoDB\Server\4.4\bin)
-	e abra um terminal a partir desse diretório
+Flávio Mohallen, curso de Sistemas de informação
+-> Matrícula: 35036
 
-	Pegue o endereço do diretório 'data' criado anteriormente no diretório server
-	Agora no terminal que foi aberto na pasta bin do mongodb, execute o seguinte comando:
-	mongod --dbpatch endereco-diretorio-data
+João Lucas Ribeiro, curso de Sistemas de informação
+-> Matrícula: 2019005856
 
+Robson de Arruda Silva, curso de Sistemas de informação
+-> Matrícula: 2019013624
+```
 
-Para iniciar o backend:
-	- no terminal navegue para o diretório server
-	- execute o comando: npm start
-	- será inicializado o backend da aplicação
+## :information_source: Como foi implementado ?
 
-Para iniciar o frontend:
-	- no terminal navegue para o diretório client
-	- execute o comando: npm start
-	- será inicializado o frontend da aplicação (pode demorar alguns segundos/minutos, devido a compilação do Angular), logo após vá no navegador e entre no endereço indicado no terminal pelo Angular (por padrão é http://localhost:4200/) 
+    Neste trabalho, foi implementado um sistema para gestão de vendas de imóveis a ser utilizado por uma
+    imobiliária. A empresa que solicitou o sistema trabalha com a venda de imóveis rurais e urbanos. Os
+    imóveis comercializados são dos seguintes tipos: casa, apartamento, sala comercial, lote, chácara, sítio
+    e fazenda. Este sistema é capaz de cadastrar os imóveis à venda, com os seguintes atributos: código, tipo,
+    descrição, nome do vendedor (proprietário), preço solicitado, imagem e data de cadastro (campo livre para
+    digitação).
 
-Caso desejar iniciar os dois de uma vez:
-	- navegue para o diretório do server e execute o comando: npm run dev
-	- será iniciando o backend e o frontend automaticamente, o frontend da aplicação pode demorar alguns segundos/minutos, devido a compilação do Angular, logo após vá no navegador e entre no endereço indicado no terminal pelo Angular (por padrão é http://localhost:4200/) 
+<div align="center">
+  <img src="./images/Animation.gif">
+</div>
+
+## :computer: Tecnologias utilizadas
+
+### >MEAN stack
+
+- M - Mongo
+- E - Express
+- A - Angular
+- N - Node
+
+### >Linguagem: Typescript
+
+## :dart: Passo a passo para executar o projeto
+
+## Como clonar o repositório?
+
+Basta abrir o git bash ou o terminal e executar o comando:
+
+`git clone https://github.com/carloshssouza/TrabalhoFinal-web.git`
+
+Em seguida, abra um terminal ou git bash a partir da pasta gerada do git clone
+
+## Instalação dos pacotes
+
+### Front-end:
+
+- Navegue para o diretório client, utilizando o comando: `cd client`
+- Execute o comando: `npm install`
+
+### Back-end:
+
+- Retorne um diretório, utilizando o comando: `cd ..`
+- Navegue para o diretório server, utilizando o comando: `cd server`
+- Execute o comando: `npm install`
+- Mantenha o terminal aberto.
+
+# :trophy: Pronto, os pacotes foram instalados!
+
+## Agora, para configurar a pasta de dados do mongodb:
+
+- No diretório server, crie um diretório chamado: `data`
+
+- Procure, no seu computador, o diretório bin do mongodb
+
+  `(Se o mongodb foi instalado de maneira padrão, geralmente fica em C:\Program Files\MongoDB\Server\4.4\bin)`
+
+- Abra um terminal a partir desse diretório
+
+- Pegue o endereço do diretório 'data' criado anteriormente no diretório server
+
+- Agora, no terminal que foi aberto na pasta bin do mongodb, execute o seguinte comando:
+
+  `mongod --dbpatch endereco-diretorio-data`
+
+### Para iniciar o backend:
+
+- No terminal, navegue para o diretório server
+- Execute o comando: `npm start`
+- Será inicializado o backend da aplicação.
+
+### Para iniciar o frontend:
+
+- No terminal, navegue para o diretório client
+- Execute o comando: npm start
+- Será inicializado o frontend da aplicação (pode demorar alguns segundos/minutos, devido a compilação do Angular), logo após vá no navegador e entre no endereço indicado no terminal pelo Angular (por padrão é http://localhost:4200/)
+
+## :rocket: Caso desejar iniciar os dois de uma vez:
+
+- Navegue para o diretório do server e execute o comando: `npm run dev`
+- Será iniciando o backend e o frontend automaticamente, o frontend da aplicação pode demorar alguns segundos/minutos, devido a compilação do Angular, logo após vá no navegador e entre no endereço
+  indicado no terminal pelo Angular
+
+`(por padrão é http://localhost:4200/)`
+
+# :trophy: Sucesso! O sistema já está rodando na sua máquina!

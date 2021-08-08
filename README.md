@@ -77,7 +77,7 @@ Em seguida, abra um terminal ou git bash a partir da pasta gerada do git clone
 ### Para iniciar o frontend:
 
 - No terminal, navegue para o diretório client
-- Execute o comando: npm start
+- Execute o comando: `npm start`
 - Será inicializado o frontend da aplicação (pode demorar alguns segundos/minutos, devido a compilação do Angular), logo após vá no navegador e entre no endereço indicado no terminal pelo Angular (por padrão é http://localhost:4200/)
 
 ## :rocket: Caso desejar iniciar os dois de uma vez:

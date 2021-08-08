@@ -2,36 +2,7 @@
 
 ![Transferidor UDP](images/banner.png)
 
-## :boom: Este é trabalho final da disciplina COM222 - Desenvolvimento Web!
-
-## :closed_book: Informações do trabalho
-
-### É um Sistema para Controle de Vendas de Imóveis
-
-- Disciplina: Desenvolvimento Web
-- Professor: Laercio Baldochi Júnior
-- Universidade: Unifei - Universidade Federal de Itajubá
-
-## :construction_worker: Desenvolvido Por
-
-```
-Carlos Henrique Souza Silva, curso de Sistemas de informação
--> Matrícula: 2019015979
-
-Fauzi Consoli Esper, curso de Sistemas de informação
--> Matrícula: 27497
-
-Flávio Mohallen, curso de Sistemas de informação
--> Matrícula: 35036
-
-João Lucas Ribeiro, curso de Sistemas de informação
--> Matrícula: 2019005856
-
-Robson de Arruda Silva, curso de Sistemas de informação
--> Matrícula: 2019013624
-```
-
-## :information_source: Como foi implementado ?
+## :information_source: Como foi implementado?
 
     Neste trabalho, foi implementado um sistema para gestão de vendas de imóveis a ser utilizado por uma
     imobiliária. A empresa que solicitou o sistema trabalha com a venda de imóveis rurais e urbanos. Os

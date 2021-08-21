@@ -12,7 +12,7 @@
     digitação).
 
 <div align="center">
-  <img src="./images/Animation.gif">
+  <img src="./images/Animation.gif"> 
 </div>
 
 ## :computer: Tecnologias utilizadas

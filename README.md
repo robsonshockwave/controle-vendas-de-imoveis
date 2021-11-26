@@ -32,7 +32,7 @@
 
 Basta abrir o git bash ou o terminal e executar o comando:
 
-`git clone https://github.com/carloshssouza/TrabalhoFinal-web.git`
+`git clone https://github.com/robsonshockwave/controle-vendas-de-imoveis.git`
 
 Em seguida, abra um terminal ou git bash a partir da pasta gerada do git clone
 
